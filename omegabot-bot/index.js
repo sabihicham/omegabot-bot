@@ -1,7 +1,18 @@
 import { Client, GatewayIntentBits, EmbedBuilder, Partials } from "discord.js";
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getDatabase, ref, get } from "firebase/database";
+import express from "express";
 
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get("/", (req, res) => {
+  res.send("OmegaBot is running ✅");
+});
+
+app.listen(PORT, () => {
+  console.log(`Web server running on port ${PORT}`);
+});
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
   authDomain: process.env.FIREBASE_AUTH_DOMAIN,
