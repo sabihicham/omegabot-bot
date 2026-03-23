@@ -1,13 +1,19 @@
 {
   "name": "omegabot",
   "version": "1.0.0",
-  "type": "module",
+  "description": "Discord verification bot",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "build": "echo Build completed",
     "start": "node index.js"
   },
   "dependencies": {
     "discord.js": "^14.25.1",
-    "firebase": "^9.23.0"
+    "firebase": "^9.23.0",
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
